@@ -1,4 +1,48 @@
-<h1 style="text-align: center;">FTPWorker</h1>
-<h3 style="text-align: left;">Описание</h3>
-<hr>
-Этот модуль упрощает, работу с `ftplib`.
+# FTPWorker
+## Описание
+Модуль **FTPWorker** сделан для упрощения работы с `ftplib`.
+## Пример
+- `main.py`
+```python
+import ftpworker
+
+ftpw = ftpworker.FTPWorker("ftp.example.com", 21, "user", "password")
+ftpw.connect()
+
+print(ftpw.dir())
+
+ftpw.disconnect()
+```
+- Вывод
+```python
+[
+    {
+        "name": ".",
+        "type": "directory",
+        "size": 1024,
+        "user": "user",
+        "permissions": (7, 7, 7),
+        "change_time": datetime(2022, 3, 19, 0, 0, 0)
+    },
+    {
+        "name": "..",
+        "type": "directory",
+        "size": 1024,
+        "user": "user",
+        "permissions": (7, 7, 7),
+        "change_time": datetime(2022, 3, 19, 0, 0, 0)
+    },
+    {
+        "name": "example.txt",
+        "type": "file",
+        "size": 1024,
+        "user": "user",
+        "permissions": (7, 7, 7),
+        "change_time": datetime(2022, 3, 19, 0, 0, 0)
+    },
+]
+```
+## Авторы
+- `Роман Слабицкий`
+    - [VK](https://vk.com/romanin2)
+    - [GitHub](https://github.com/romanin-rf)

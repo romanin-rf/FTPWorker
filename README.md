@@ -43,7 +43,8 @@ ftpw.disconnect()
         "change_time": datetime(2022, 3, 19, 0, 0, 0)
     },
 ]
-
+```
+```python
 [".", "..", "example.txt"]
 ```
 ## Авторы

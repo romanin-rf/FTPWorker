@@ -11,6 +11,8 @@ ftpw.connect()
 
 print(ftpw.dir())
 
+print(ftpw.dir(full_info=False))
+
 ftpw.disconnect()
 ```
 - Вывод
@@ -41,6 +43,8 @@ ftpw.disconnect()
         "change_time": datetime(2022, 3, 19, 0, 0, 0)
     },
 ]
+
+[".", "..", "example.txt"]
 ```
 ## Авторы
 - `Роман Слабицкий`
